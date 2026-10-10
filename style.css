@@ -405,6 +405,8 @@ nav a:hover {
     }
     
     .side-bar {
+        margin: auto;
+        padding: 0px 70px;
         display: flex;
         flex-direction: column;
         align-items: center;
