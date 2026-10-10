@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        /* height & width = content + 2x  padding + 2x border*/
+}
+
+body {
+
+    background-color: #1e1e1e;
+    color: #a0a0a0;
+
+    font-family: sans-serif;
+    line-height: 1.6;               /*Spacing between the lines*/
+
+}
+
+        /* Overlays */
+
+header {
+    position: fixed;
+    height: 100vh;
+    inset: 0;
+}
+
+.overlay {
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+}
+
+header video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    position: sticky;
+    z-index: 0;
+}
+
+        /* Main Content */
+
+main {
+    
+    margin: auto;
+    padding: 40px;
+
+    width: min(95% , 1200px);
+    
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 40px;
+
+    position: relative;
+    z-index: 999;
+}
+
+
+.side-bar {
+    height: 90vh;
+    padding: 15px;
+
+    background-color: rgb(0 0 0 / 60%);
+    border: 1px solid #3a3a3a;
+    
+    border-radius: 16px;
+
+    position: sticky;
+    top: 40px;
+
+}
+
+.main-content {
+    margin: 0px 25px;
+    padding: 0px 30px;
+
+    height: auto;
+
+    background-color: rgb(0 0 0 / 60%);
+
+    border: 1px solid #3a3a3a;
+    border-radius: 16px;
+
+}
+
+    /* Profile Section: */
+
+.profile {
+    text-align: center;
+    font-family: "Mochiy Pop One", sans-serif;
+}
+
+.profile img {
+    height: 160px;
+    width: 155px;
+
+    background-color: white;
+
+    border: 1px solid #3a3a3a;
+    border-radius: 50%;
+}
+
+.profile h3 {
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+.profile p {
+
+    margin-top: 10px;
+    padding: 5px 15px;
+
+    font-size: 0.8rem;
+    background-color: #1e1e1e;
+    color: #ffbf00;
+
+    border: 1px solid #a0a0a0;
+    border-radius: 8px;
+}
+
+
+    /* Contact Section: */
+
+.contact {
+    margin-top: 20px;
+    border-top: 2px solid #a0a0a0;
+}
+
+.email, .phone, .address {
+    padding-top: 20px;
+}
+
+.label {
+    color: #a0a0a0;
+}
+
+.value {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+    /* Social Section: */
+
+.social {
+    margin-top: 20px;
+    border-top: 2px solid #a0a0a0;
+
+    font-size: 2.5rem;
+}
+
+.items {
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+        /* Main-Content */
+
+    /* Navigation */
+
+nav {
+    padding: 25px 0px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    
+    border-bottom: 2px solid #3a3a3a;
+}
+
+nav a {
+    text-decoration: none;
+    color: #a0a0a0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    transition: color 0.5s ease;
+}
+
+nav a:first-child {
+    color: #ffbf00;
+}
+
+nav a:hover {
+    color: #ffbf00;
+}
+
+    /* About Me */
+
+#about {
+    padding: 20px 0px;
+
+    border-bottom: 2px solid #3a3a3a;
+}
+
+.heading {
+    font-size: 2rem;
+    color: #e0e0e0;
+}
+
+.line {
+    margin: 15px 0px 12px 0px;
+
+    height: 10px;
+    width: 60px;
+    
+    background-color: #ffbf00;
+}
+
+    /* Skills */
+
+#skills {
+    padding: 20px 0px;
+}
+
+.grid-container {
+    padding: 10px 0px 30px 0px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(150px , 1fr));
+    gap: 40px;
+
+    border-bottom: 2px solid #3a3a3a;
+}
+
+.grid-item {
+    padding: 20px;
+    
+    background-color: #1e1e1e;
+
+    border: 2px solid #3a3a3a;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 0px 15px 10px #565656;
+    
+    transition: transform 0.3s ease , box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px 5px gray;
+}
+
+    /* Education */
+
+#education {
+    border-bottom: 2px solid #3a3a3a;
+}
+
+
+.eduFirst , .eduSecond, .eduThird {
+    margin: 30px;
+    padding:  0px 10px;
+
+    position: relative;
+}
+
+.year {
+    font-size: 0.9rem;
+    color: #a0a0a0;
+    margin-bottom: 5px;
+}
+
+.degree {
+    color: white;
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.clg {
+    font-style: italic;
+    color: #a0a0a0;
+}
+
+.marks {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+}
+
+.edu {
+    border-left: 1px solid #a0a0a0;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+
+    border:4px solid #ffbf00;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: -40px;
+}
+
+.work {
+    font-size: 15px;
+    text-indent: 25px;
+}
+
+    /* Portfolio */
+
+#projects {
+    padding: 20px 0px;
+}
+
+.project-container {
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+
+.project-item {
+    margin: auto;
+    padding: 20px;
+
+
+    background-color: #1e1e1e;
+
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-item img {
+    height: 180px;
+    width: 100%;
+
+    object-fit: contain;
+}
+
+.desc h3 {
+    margin: 10px 0px;
+
+    color:#e0e0e0;
+
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.desc p {
+    text-align: justify;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 15px #565656;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card span {
+    margin-right: 10px;
+    padding: 4px 8px;
+
+    background-color: rgba(255, 191, 0, 0.1);
+    
+    color: #ffbf00;
+    font-size: 0.75rem;
+    
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 900px) {
+
+    main {
+        margin: 0px 10px;
+        
+        grid-template-columns: 1fr;
+        
+        justify-content: center;
+        align-items: center;
+    }
+
+    .side-bar {
+        height: auto;
+        position: static;
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .side-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+
+
+
