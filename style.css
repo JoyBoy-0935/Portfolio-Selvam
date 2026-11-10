@@ -322,6 +322,10 @@ nav a:hover {
     gap: 20px
 }
 
+.project-container a {
+    text-decoration: none;
+}
+
 .project-item {
     margin: auto;
     padding: 20px;
